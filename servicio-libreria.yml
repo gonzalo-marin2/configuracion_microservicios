@@ -20,6 +20,8 @@ spring:
           issuer-uri: http://${HOST_KEYCLOAK}:8080/realms/UsuariosCursoRealm
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
 eureka:
+  instance:
+    hostname: ${HOST}
   client:
     service-url:
       default-zone: http://${HOST_EUREKA}:8761/eureka
